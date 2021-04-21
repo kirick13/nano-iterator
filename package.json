@@ -1,0 +1,23 @@
+{
+  "name": "nano-iterator",
+  "version": "1.0.0",
+  "description": "Really tiny iterator for arrays and objects.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kirick13/nano-iterator.git"
+  },
+  "keywords": [
+    "nano-iterator",
+    "iterator"
+  ],
+  "author": "kirick",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kirick13/nano-iterator/issues"
+  },
+  "homepage": "https://github.com/kirick13/nano-iterator#readme"
+}
