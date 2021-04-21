@@ -1,6 +1,6 @@
 {
-  "name": "nano-iterator",
-  "version": "1.0.0",
+  "name": "uiterator",
+  "version": "1.0.1",
   "description": "Really tiny iterator for arrays and objects.",
   "main": "index.js",
   "scripts": {
@@ -8,16 +8,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kirick13/nano-iterator.git"
+    "url": "git+https://github.com/kirick13/uiterator.git"
   },
   "keywords": [
-    "nano-iterator",
-    "iterator"
+    "uiterator",
+    "iterator",
+    "micro iterator"
   ],
   "author": "kirick",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/kirick13/nano-iterator/issues"
+    "url": "https://github.com/kirick13/uiterator/issues"
   },
-  "homepage": "https://github.com/kirick13/nano-iterator#readme"
+  "homepage": "https://github.com/kirick13/uiterator#readme"
 }

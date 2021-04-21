@@ -26,7 +26,7 @@ for (const index of iterate(test_array).keys()) {
   // 2
 }
 ```
-(There is no need to iterate array values using `nano-iterator`.)
+(There is no need to iterate array values using `uiterator`.)
 
 ### Object examples
 ```javascript
