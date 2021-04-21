@@ -1,10 +1,10 @@
-# nano-iterator
+# μiterator
 Really tiny iterator for arrays and objects.
 
 ## Usage
 Require `iterate` function into your module.
 ```javascript
-const { iterate } = require('nano-iterator');
+const { iterate } = require('uiterator');
 ```
 
 Now you can iterate over:
