@@ -1,24 +1,24 @@
 {
-  "name": "uiterator",
-  "version": "1.0.1",
-  "description": "Really tiny iterator for arrays and objects.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/kirick13/uiterator.git"
-  },
-  "keywords": [
-    "uiterator",
-    "iterator",
-    "micro iterator"
-  ],
-  "author": "kirick",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/kirick13/uiterator/issues"
-  },
-  "homepage": "https://github.com/kirick13/uiterator#readme"
+	"name": "uiterator",
+	"version": "1.0.2",
+	"description": "Really tiny iterator for arrays and objects.",
+	"main": "main.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/kirick13/uiterator.git"
+	},
+	"keywords": [
+		"uiterator",
+		"iterator",
+		"micro iterator"
+	],
+	"author": "Daniil Kirichenko (https://twitter.com/kirickme)",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/kirick13/uiterator/issues"
+	},
+	"homepage": "https://github.com/kirick13/uiterator#readme"
 }
