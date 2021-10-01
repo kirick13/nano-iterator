@@ -1,10 +1,11 @@
 {
 	"name": "uiterator",
-	"version": "1.0.4",
+	"version": "1.0.5",
 	"description": "Really tiny iterator for arrays and objects.",
 	"main": "main.js",
-	"unpkg": "/dist/uiterator.esm-browser.min.js",
-	"jsdelivr": "/dist/uiterator.esm-browser.min.js",
+	"devDependencies": {
+		"xo": "^0.37.1"
+	},
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
@@ -22,5 +23,108 @@
 	"bugs": {
 		"url": "https://github.com/kirick13/uiterator/issues"
 	},
-	"homepage": "https://github.com/kirick13/uiterator#readme"
+	"homepage": "https://github.com/kirick13/uiterator#readme",
+	"xo": {
+		"rules": {
+			"array-bracket-spacing": [
+				"error",
+				"always",
+				{
+					"arraysInArrays": false,
+					"objectsInArrays": false
+				}
+			],
+			"arrow-parens": "off",
+			"brace-style": [
+				"warn",
+				"stroustrup"
+			],
+			"camelcase": "off",
+			"capitalized-comments": "off",
+			"comma-dangle": [
+				"warn",
+				"always-multiline"
+			],
+			"computed-property-spacing": "off",
+			"func-names": "off",
+			"indent": "off",
+			"key-spacing": [
+				"error",
+				{
+					"singleLine": {
+						"mode": "minimum",
+						"beforeColon": false,
+						"afterColon": true
+					},
+					"multiLine": {
+						"mode": "minimum",
+						"beforeColon": false,
+						"afterColon": true
+					}
+				}
+			],
+			"max-params": "off",
+			"new-cap": [
+				"error",
+				{
+					"newIsCap": true,
+					"capIsNew": false
+				}
+			],
+			"no-else-return": "off",
+			"no-lone-blocks": "off",
+			"no-lonely-if": "off",
+			"no-multi-assign": "off",
+			"no-unused-expressions": [
+				"error",
+				{
+					"allowShortCircuit": true
+				}
+			],
+			"no-unused-vars": "warn",
+			"object-curly-spacing": [
+				"error",
+				"always",
+				{
+					"arraysInObjects": false,
+					"objectsInObjects": false
+				}
+			],
+			"padding-line-between-statements": "off",
+			"prefer-const": "warn",
+			"quote-props": "off",
+			"quotes": [
+				"error",
+				"single",
+				{
+					"allowTemplateLiterals": true
+				}
+			],
+			"space-before-blocks": [
+				"error",
+				{
+					"functions": "always",
+					"keywords": "always",
+					"classes": "always"
+				}
+			],
+			"space-before-function-paren": [
+				"error",
+				"always"
+			],
+			"space-infix-ops": "off",
+			"spaced-comment": [
+				"warn"
+			],
+			"strict": [
+				"error",
+				"global"
+			],
+			"yoda": "off",
+			"import/extensions": "off",
+			"unicorn/no-lonely-if": "off",
+			"unicorn/prefer-ternary": "off",
+			"unicorn/prevent-abbreviations": "off"
+		}
+	}
 }

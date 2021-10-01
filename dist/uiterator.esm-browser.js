@@ -1,32 +1,39 @@
 
-const next = function () {
-	const index = this.index;
-	const iterate_over = this.is_array ? this.target : this.keys;
+const next = (self) => {
+	const [
+		index,
+		meta,
+		target,
+		is_array,
+		keys,
+	] = self;
 
-	if(index >= iterate_over.length){
+	const iterate_over = is_array ? target : keys;
+
+	if (index >= iterate_over.length) {
 		return {
 			done: true,
 		};
 	}
 
-	const key = this.is_array ? this.index : this.keys[this.index];
+	const key = is_array ? index : keys[index];
 
 	let iterator_value;
-	if('k' === this.meta){
+	if ('k' === meta) {
 		iterator_value = key;
 	}
 	else {
-		const value = this.target[key];
+		const value = target[key];
 
-		if('v' === this.meta){
+		if ('v' === meta) {
 			iterator_value = value;
 		}
-		else if('kv' === this.meta){
+		else if ('kv' === meta) {
 			iterator_value = [ key, value ];
 		}
 	}
 
-	this.index++;
+	self[0]++;
 
 	return {
 		value: iterator_value,
@@ -34,17 +41,20 @@ const next = function () {
 	};
 };
 
-const getIterator = ({ meta, target, is_array }) => ({
+const getIterator = (meta, target, is_array) => ({
 	[ Symbol.iterator ]: () => {
-		return {
-			next () {
-				return next.call(this);
-			},
-			index: 0,
+		let args = [ // eslint-disable-line prefer-const
+			0,
 			meta,
 			target,
 			is_array,
-			keys: is_array ? null : Object.keys(target),
+			is_array ? null : Object.keys(target),
+		];
+
+		return {
+			next () {
+				return next(args);
+			},
 		};
 	},
 });
@@ -52,23 +62,23 @@ const getIterator = ({ meta, target, is_array }) => ({
 export const iterate = (target) => {
 	const is_array = Array.isArray(target);
 
-	const result = getIterator({
-		meta: 'kv',
+	const result = getIterator(
+		'kv',
 		target,
 		is_array,
-	});
+	);
 
-	result.keys = () => getIterator({
-		meta: 'k',
+	result.keys = () => getIterator(
+		'k',
 		target,
 		is_array,
-	});
+	);
 
-	result.values = () => getIterator({
-		meta: 'v',
+	result.values = () => getIterator(
+		'v',
 		target,
 		is_array,
-	});
+	);
 
 	return result;
 };
